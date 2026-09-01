@@ -25,7 +25,7 @@ const PRIJEVODI = {
     meta_desc_galerija: "Fotogalerija apartmana Stara Kuća - pogledajte apartman i okolicu.",
 
     hero_eyebrow: "Dobrodošli u",
-    hero_subtitle: "Kamena priča, moderna udobnost. Vaš mir usred stare gradske jezgre.",
+    hero_subtitle: "Pravi odabir za miran i opušten odmor.",
     hero_btn_cjenik: "Pogledajte cjenik",
     hero_btn_slike: "Pogledajte slike",
 
@@ -101,8 +101,6 @@ const PRIJEVODI = {
     form_success_text: "Poslat će se domaćinu čim potvrdite slanje u WhatsAppu. Javit ćemo vam se u najkraćem roku.",
 
     footer_rights: "© {godina} Apartman Stara Kuća. Sva prava pridržana.",
-    footer_credit_pocetna: "Izrada stranice: prilagodite sadržaj u index.html, js/podaci.js i mapi images.",
-    footer_credit_galerija: "Slike dodajete u js/galerija-podaci.js i mapu images.",
 
     galerija_eyebrow: "Pogledajte",
     galerija_h1: "Fotogalerija",
@@ -136,7 +134,7 @@ const PRIJEVODI = {
     meta_desc_galerija: "Photo gallery of the Stara Kuća apartment - see the apartment and its surroundings.",
 
     hero_eyebrow: "Welcome to",
-    hero_subtitle: "A stone-house story, modern comfort. Your peace and quiet in the heart of the old town.",
+    hero_subtitle: "The perfect choice for a peaceful, relaxing holiday.",
     hero_btn_cjenik: "View prices",
     hero_btn_slike: "View photos",
 
@@ -212,8 +210,6 @@ const PRIJEVODI = {
     form_success_text: "It will be sent to the host once you confirm it in WhatsApp. We'll get back to you as soon as possible.",
 
     footer_rights: "© {godina} Stara Kuća Apartment. All rights reserved.",
-    footer_credit_pocetna: "Editing the site: update the content in index.html, js/podaci.js and the images folder.",
-    footer_credit_galerija: "Add photos in js/galerija-podaci.js and the images folder.",
 
     galerija_eyebrow: "Take a look",
     galerija_h1: "Photo Gallery",
@@ -247,7 +243,7 @@ const PRIJEVODI = {
     meta_desc_galerija: "Fotogalerie des Apartments Stara Kuća - Apartment und Umgebung ansehen.",
 
     hero_eyebrow: "Willkommen im",
-    hero_subtitle: "Ein Steinhaus mit Geschichte, moderner Komfort. Ihre Ruhe mitten in der Altstadt.",
+    hero_subtitle: "Die richtige Wahl für einen ruhigen, entspannten Urlaub.",
     hero_btn_cjenik: "Preise ansehen",
     hero_btn_slike: "Fotos ansehen",
 
@@ -323,8 +319,6 @@ const PRIJEVODI = {
     form_success_text: "Sie wird an den Gastgeber gesendet, sobald Sie sie in WhatsApp bestätigen. Wir melden uns so schnell wie möglich bei Ihnen.",
 
     footer_rights: "© {godina} Apartment Stara Kuća. Alle Rechte vorbehalten.",
-    footer_credit_pocetna: "Website bearbeiten: Inhalte in index.html, js/podaci.js und im Ordner images anpassen.",
-    footer_credit_galerija: "Fotos hinzufügen in js/galerija-podaci.js und im Ordner images.",
 
     galerija_eyebrow: "Ansehen",
     galerija_h1: "Fotogalerie",
