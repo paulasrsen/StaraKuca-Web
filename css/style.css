@@ -398,7 +398,9 @@ a { color: inherit; text-decoration: none; }
   .reviews-grid { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 640px) {
+/* Izbornik u zaglavlju (nav + gumb Rezervirajte) prelazi na hamburger ranije nego ostatak stranice,
+   jer uz jezične gumbe (HR/EN/DE) inače ne stane na srednje širokim prozorima/prijenosnicima. */
+@media (max-width: 960px) {
   .main-nav, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .main-nav.open {
@@ -408,6 +410,8 @@ a { color: inherit; text-decoration: none; }
     padding: 8px 24px 18px;
   }
   .main-nav.open a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
   .reviews-grid { grid-template-columns: 1fr; }
   .amenities { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
