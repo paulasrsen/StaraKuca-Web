@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#a9714f"/>
+  <rect width="800" height="600" fill="#14545c" opacity="0.2"/>
+  <circle cx="140" cy="140" r="130" fill="#ffffff" opacity="0.08"/>
+  <circle cx="640" cy="490" r="160" fill="#1f6f78" opacity="0.22"/>
+  <text x="400" y="290" font-family="Georgia, serif" font-size="34" fill="#ffffff" text-anchor="middle">Okolica 4</text>
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="17" fill="rgba(255,255,255,0.75)" text-anchor="middle">Zamijenite u images/okolica-4.svg</text>
+</svg>
