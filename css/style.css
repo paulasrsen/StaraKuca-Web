@@ -316,14 +316,28 @@ a { color: inherit; text-decoration: none; }
 .source-booking { background: #003580; }
 .source-airbnb { background: #ff385c; }
 .review-stars { color: #e0a12c; font-size: 0.9rem; }
-.review-text { color: var(--ink-soft); font-size: 0.95rem; margin: 0 0 14px; }
-.review-translate-btn {
-  display: block; border: none; background: none; cursor: pointer; padding: 0;
-  font-family: var(--font-body); font-size: 0.82rem; font-weight: 600; color: var(--teal-dark);
-  margin: 0 0 14px; text-decoration: underline; text-underline-offset: 2px;
+.review-text { color: var(--ink-soft); font-size: 0.95rem; margin: 0 0 10px; }
+.review-text.klamano {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
-.review-translate-btn:hover { color: var(--teal); }
+.review-actions { display: flex; gap: 16px; flex-wrap: wrap; margin: 0 0 14px; }
+.review-action-btn {
+  display: inline-block; border: none; background: none; cursor: pointer; padding: 0;
+  font-family: var(--font-body); font-size: 0.82rem; font-weight: 600; color: var(--teal-dark);
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.review-action-btn:hover { color: var(--teal); }
 .review-author { font-weight: 600; font-size: 0.9rem; }
+
+/* Uvjeti rezervacije */
+.policy-box {
+  max-width: 620px; margin-top: 20px; padding: 18px 22px;
+  background: var(--cream-alt); border-radius: var(--radius); border: 1px solid var(--line);
+}
+.policy-title { font-weight: 700; margin: 0 0 8px; color: var(--ink); }
+.policy-box ul { margin: 0; padding-left: 20px; color: var(--ink-soft); font-size: 0.9rem; }
+.policy-box li { margin-bottom: 4px; }
+.policy-box li:last-child { margin-bottom: 0; }
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 40px; }
@@ -387,6 +401,9 @@ a { color: inherit; text-decoration: none; }
 }
 .fab-top.visible { opacity: 1; pointer-events: auto; }
 
+/* Traka brzih radnji za mobitel (poziv / WhatsApp / rezervacija) */
+.mobile-actionbar { display: none; }
+
 /* Footer */
 .site-footer { background: var(--ink); color: #d8cfc4; padding: 30px 0; }
 .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 0.85rem; }
@@ -416,11 +433,38 @@ a { color: inherit; text-decoration: none; }
   .amenities { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .full-gallery-grid { grid-template-columns: 1fr 1fr; }
-  .section { padding: 60px 0; }
+  .section { padding: 44px 0; }
   .gallery-count { margin-left: 0; width: 100%; }
   .lightbox { padding: 16px; }
   .lightbox-arrow { width: 42px; height: 42px; font-size: 1.1rem; }
   .lightbox-prev { left: 4px; }
   .lightbox-next { right: 4px; }
   .jezik-gumb { width: 34px; height: 30px; font-size: 0.66rem; }
+
+  /* Manji, gušći hero na mobitelu - ne guta cijeli ekran */
+  .hero { min-height: 62vh; }
+  .hero-content { padding-top: 60px; padding-bottom: 60px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { text-align: center; }
+
+  /* Traka brzih radnji na dnu ekrana zamjenjuje plutajući WhatsApp gumb */
+  body { padding-bottom: 66px; }
+  .fab-whatsapp { display: none; }
+  .fab-top { bottom: 78px; right: 16px; width: 44px; height: 44px; font-size: 1.2rem; }
+  .mobile-actionbar {
+    display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 45;
+    background: var(--white); border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 20px rgba(43, 36, 32, 0.10);
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
+  }
+  .mobile-actionbar-item {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+    padding: 6px 4px; border-radius: 10px;
+    font-size: 0.68rem; font-weight: 600; color: var(--ink-soft);
+  }
+  .mobile-actionbar-icon { font-size: 1.15rem; }
+  .mobile-actionbar-primary { background: var(--teal); color: var(--white); }
+
+  /* Uže polje pravila rezervacije bez fiksne najveće širine */
+  .policy-box { max-width: none; }
 }

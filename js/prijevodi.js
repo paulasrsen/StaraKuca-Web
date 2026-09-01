@@ -70,6 +70,14 @@ const PRIJEVODI = {
     reviews_lead: "Pogledajte što naši gosti kažu o svom boravku.",
     review_prevedi: "Prevedi",
     review_izvornik: "Prikaži izvornik",
+    review_procitaj_vise: "Pročitaj više",
+    review_prikazi_manje: "Prikaži manje",
+
+    policy_title: "Uvjeti rezervacije",
+    policy_depozit: "Za potvrdu rezervacije potreban je depozit u iznosu od 30% ukupnog iznosa rezervacije.",
+    policy_otkazivanje: "Besplatno otkazivanje moguće je najkasnije mjesec dana prije datuma dolaska.",
+
+    mob_poziv: "Poziv",
 
     kontakt_eyebrow: "Javite nam se",
     kontakt_title: "Kontakt i rezervacije",
@@ -173,6 +181,14 @@ const PRIJEVODI = {
     reviews_lead: "See what our guests say about their stay.",
     review_prevedi: "Translate",
     review_izvornik: "Show original",
+    review_procitaj_vise: "Read more",
+    review_prikazi_manje: "Show less",
+
+    policy_title: "Booking policy",
+    policy_depozit: "A deposit of 30% of the total booking amount is required to confirm your reservation.",
+    policy_otkazivanje: "Free cancellation is possible up to one month before your arrival date.",
+
+    mob_poziv: "Call",
 
     kontakt_eyebrow: "Get in touch",
     kontakt_title: "Contact & bookings",
@@ -276,6 +292,14 @@ const PRIJEVODI = {
     reviews_lead: "Lesen Sie, was unsere Gäste über ihren Aufenthalt sagen.",
     review_prevedi: "Übersetzen",
     review_izvornik: "Original anzeigen",
+    review_procitaj_vise: "Mehr lesen",
+    review_prikazi_manje: "Weniger anzeigen",
+
+    policy_title: "Buchungsbedingungen",
+    policy_depozit: "Zur Bestätigung der Reservierung ist eine Anzahlung von 30% des Gesamtbetrags erforderlich.",
+    policy_otkazivanje: "Eine kostenlose Stornierung ist bis spätestens einen Monat vor dem Anreisedatum möglich.",
+
+    mob_poziv: "Anrufen",
 
     kontakt_eyebrow: "Kontaktieren Sie uns",
     kontakt_title: "Kontakt & Buchung",

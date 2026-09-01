@@ -328,26 +328,60 @@ function iscrtajRecenzije() {
         <span class="review-source source-${r.izvor}">${IZVOR_LABEL[r.izvor] || r.izvor}</span>
         <span class="review-stars">${zvijezde}</span>
       </div>
-      <p class="review-text"></p>
-      ${imaPrijevod ? `<button type="button" class="review-translate-btn"></button>` : ""}
+      <p class="review-text klamano"></p>
+      <div class="review-actions"></div>
       <p class="review-author">${r.autor}</p>
     `;
+    // Prvo dodajemo karticu u dokument - mjerenje visine teksta (za gumb "Pročitaj više")
+    // radi ispravno samo dok je element stvarno prikazan na stranici.
+    recenzijeGrid.appendChild(card);
 
     const tekstEl = card.querySelector(".review-text");
-    tekstEl.textContent = `"${r.tekst}"`;
+    const akcijeEl = card.querySelector(".review-actions");
+    let prevedeno = false;
+    let prosireno = false;
+    let gumbCitaj = null;
 
-    if (imaPrijevod) {
-      const gumbPrijevod = card.querySelector(".review-translate-btn");
-      let prevedeno = false;
-      gumbPrijevod.textContent = t("review_prevedi");
-      gumbPrijevod.addEventListener("click", () => {
-        prevedeno = !prevedeno;
-        tekstEl.textContent = prevedeno ? `"${r.prijevodi[trenutniJezik()]}"` : `"${r.tekst}"`;
-        gumbPrijevod.textContent = prevedeno ? t("review_izvornik") : t("review_prevedi");
-      });
+    function azurirajGumbCitaj() {
+      const potrebno = tekstEl.scrollHeight > tekstEl.clientHeight + 2;
+      if (potrebno && !gumbCitaj) {
+        gumbCitaj = document.createElement("button");
+        gumbCitaj.type = "button";
+        gumbCitaj.className = "review-action-btn";
+        akcijeEl.appendChild(gumbCitaj);
+        gumbCitaj.addEventListener("click", () => {
+          prosireno = !prosireno;
+          tekstEl.classList.toggle("klamano", !prosireno);
+          gumbCitaj.textContent = prosireno ? t("review_prikazi_manje") : t("review_procitaj_vise");
+        });
+      }
+      if (!potrebno && gumbCitaj) {
+        gumbCitaj.remove();
+        gumbCitaj = null;
+      }
+      if (gumbCitaj) gumbCitaj.textContent = t("review_procitaj_vise");
     }
 
-    recenzijeGrid.appendChild(card);
+    function iscrtajTekst() {
+      prosireno = false;
+      tekstEl.classList.add("klamano");
+      tekstEl.textContent = `"${prevedeno ? r.prijevodi[trenutniJezik()] : r.tekst}"`;
+      azurirajGumbCitaj();
+    }
+    iscrtajTekst();
+
+    if (imaPrijevod) {
+      const gumbPrijevod = document.createElement("button");
+      gumbPrijevod.type = "button";
+      gumbPrijevod.className = "review-action-btn";
+      gumbPrijevod.textContent = t("review_prevedi");
+      akcijeEl.prepend(gumbPrijevod);
+      gumbPrijevod.addEventListener("click", () => {
+        prevedeno = !prevedeno;
+        gumbPrijevod.textContent = prevedeno ? t("review_izvornik") : t("review_prevedi");
+        iscrtajTekst();
+      });
+    }
   });
 }
 iscrtajRecenzije();
