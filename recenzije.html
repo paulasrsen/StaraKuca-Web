@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="title_galerija">Fotogalerija - Apartman Stara Kuća</title>
-<meta name="description" content="Fotogalerija apartmana Stara Kuća - pogledajte apartman i okolicu." data-i18n-content="meta_desc_galerija">
+<title data-i18n="title_recenzije">Recenzije - Apartman Stara Kuća</title>
+<meta name="description" content="Pročitajte što gosti kažu o apartmanu Stara Kuća na Booking.com i Airbnb-u." data-i18n-content="meta_desc_recenzije">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,34 +31,14 @@
   </div>
 </header>
 
-<section class="section gallery-page-header">
+<section class="section page-header">
   <div class="container">
-    <p class="section-eyebrow" data-i18n="galerija_eyebrow">Pogledajte</p>
-    <h1 class="section-title" data-i18n="galerija_h1">Fotogalerija</h1>
-    <p class="section-lead" data-i18n="galerija_lead">Apartman Stara Kuća i njegova okolica - kliknite na sliku za veći prikaz.</p>
-
-    <div class="gallery-filters">
-      <button type="button" class="filter-btn active" data-filter="sve" data-i18n="filter_sve">Sve</button>
-      <button type="button" class="filter-btn" data-filter="soba1" data-i18n="filter_soba1">Soba 1</button>
-      <button type="button" class="filter-btn" data-filter="soba2" data-i18n="filter_soba2">Soba 2</button>
-      <button type="button" class="filter-btn" data-filter="soba3" data-i18n="filter_soba3">Soba 3</button>
-      <button type="button" class="filter-btn" data-filter="zajednicki" data-i18n="filter_zajednicki">Zajednički prostori</button>
-      <button type="button" class="filter-btn" data-filter="vanjski" data-i18n="filter_vanjski">Vrt i okoliš</button>
-      <button type="button" class="filter-btn" data-filter="ostalo" data-i18n="filter_ostalo">Ostalo</button>
-      <span class="gallery-count" id="brojSlika"></span>
-    </div>
-
-    <div class="gallery-grid full-gallery-grid" id="punaGalerijaGrid"></div>
+    <p class="section-eyebrow" data-i18n="reviews_eyebrow">Što kažu gosti</p>
+    <h1 class="section-title" data-i18n="reviews_title">Recenzije</h1>
+    <p class="section-lead" data-i18n="reviews_lead">Pogledajte što naši gosti kažu o svom boravku.</p>
+    <div class="reviews-grid" id="recenzijeGrid"></div>
   </div>
 </section>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" data-i18n-aria="aria_zatvori" aria-label="Zatvori">&times;</button>
-  <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" data-i18n-aria="aria_prethodna_slika" aria-label="Prethodna slika">&#8592;</button>
-  <img src="" alt="" id="lightboxImg">
-  <button class="lightbox-arrow lightbox-next" id="lightboxNext" data-i18n-aria="aria_sljedeca_slika" aria-label="Sljedeća slika">&#8594;</button>
-  <span class="lightbox-counter" id="lightboxBroj"></span>
-</div>
 
 <a href="https://wa.me/385994975933" target="_blank" rel="noopener" class="fab-whatsapp" data-i18n-aria="aria_whatsapp" aria-label="WhatsApp">💬</a>
 <button class="fab-top" id="natrag" data-i18n-aria="aria_vrh" aria-label="Povratak na vrh">↑</button>
@@ -69,10 +49,10 @@
   </div>
 </footer>
 
-<script src="js/galerija-podaci.js"></script>
+<script src="js/podaci.js"></script>
 <script src="js/prijevodi.js"></script>
 <script src="js/zajednicko.js"></script>
-<script src="js/galerija.js"></script>
+<script src="js/recenzije.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "edb92683724a4794be06c28f92da06f3"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

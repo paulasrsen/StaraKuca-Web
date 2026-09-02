@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="title_kontakt">Kontakt i rezervacije - Apartman Stara Kuća</title>
+<meta name="description" content="Kontaktirajte nas ili pošaljite upit za rezervaciju apartmana Stara Kuća." data-i18n-content="meta_desc_kontakt">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Stara Kuća</a>
+    <nav class="main-nav" id="glavniMeni">
+      <a href="o-nama.html" data-i18n="nav_o_apartmanu">O nama</a>
+      <a href="galerija.html" data-i18n="nav_galerija">Galerija</a>
+      <a href="cjenik.html" data-i18n="nav_cjenik">Cjenik</a>
+      <a href="recenzije.html" data-i18n="nav_recenzije">Recenzije</a>
+      <a href="kontakt.html" data-i18n="nav_kontakt">Kontakt</a>
+    </nav>
+    <div class="jezik-prekidac" role="group" aria-label="Odabir jezika / Language / Sprache"></div>
+    <a href="kontakt.html" class="btn btn-primary nav-cta" data-i18n="nav_rezervirajte">Rezervirajte</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="aria_izbornik" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="section page-header">
+  <div class="container">
+    <p class="section-eyebrow" data-i18n="kontakt_eyebrow">Javite nam se</p>
+    <h1 class="section-title" data-i18n="kontakt_title">Kontakt i rezervacije</h1>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a class="contact-row" href="tel:+385994975933">
+          <span class="contact-icon">📞</span>
+          <span>
+            <strong data-i18n="kontakt_poziv_label">Nazovite nas</strong>
+            <span class="contact-value">+385 99 497 5933</span>
+          </span>
+        </a>
+        <a class="contact-row" href="mailto:srsenp17@gmail.com">
+          <span class="contact-icon">✉️</span>
+          <span>
+            <strong data-i18n="kontakt_email_label">Pošaljite e-mail</strong>
+            <span class="contact-value">srsenp17@gmail.com</span>
+          </span>
+        </a>
+        <a class="contact-row" href="https://wa.me/385994975933" target="_blank" rel="noopener">
+          <span class="contact-icon">💬</span>
+          <span>
+            <strong data-i18n="kontakt_whatsapp_label">WhatsApp</strong>
+            <span class="contact-value" data-i18n="kontakt_whatsapp_value">Pošaljite poruku</span>
+          </span>
+        </a>
+        <div class="contact-row contact-row-static">
+          <span class="contact-icon">📍</span>
+          <span>
+            <strong data-i18n="kontakt_lokacija_label">Lokacija</strong>
+            <span class="contact-value">Sršeni 16, 20357 Blace, Hrvatska</span>
+          </span>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.booking.com/hotel/hr/kameni-gust.hr.html?aid=356980&label=gog235jc-10CAsoZUILa2FtZW5pLWd1c3RIEFgDaGWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Aons29QGwAIB0gIkYWQ5NTllNWMtMmVjNS00ZjAyLTkyNjYtMTNmNTI0ZWZlODky2AIB4AIB&sid=78cf17a59d98399ced2c5d2852d7436a&dest_id=92565&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1788278290&srpvid=7b427045e2c215de&type=total&ucfs=1&" target="_blank" rel="noopener" aria-label="Booking.com oglas">Booking.com</a>
+          <a href="https://hr.airbnb.com/rooms/809250108932211108?source_impression_id=p3_1788278742_P3YRjeDBrQog_24U" target="_blank" rel="noopener" aria-label="Airbnb oglas">Airbnb</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="upitForma">
+        <h3 data-i18n="form_title">Pošaljite upit</h3>
+
+        <div class="form-success" id="upitPotvrda" hidden>
+          <p class="form-success-title" data-i18n="form_success_title">Upit je pripremljen!</p>
+          <p data-i18n="form_success_text">Poslat će se domaćinu čim potvrdite slanje u WhatsAppu. Javit ćemo vam se u najkraćem roku.</p>
+        </div>
+
+        <label>
+          <span data-i18n="form_ime_label">Ime i prezime</span>
+          <input type="text" name="ime" required>
+        </label>
+        <label>
+          <span data-i18n="form_email_label">E-mail</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span data-i18n="form_datumi_label">Datum dolaska / odlaska</span>
+          <input type="text" name="datumi" data-i18n-placeholder="form_datumi_placeholder" placeholder="npr. 12.7. – 19.7.2026." required>
+        </label>
+        <label>
+          <span data-i18n="form_gosti_label">Broj gostiju</span>
+          <select name="gosti" required>
+            <option value="" disabled selected data-i18n="form_gosti_placeholder">Odaberite broj gostiju</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="form_poruka_label">Poruka (nije obavezno)</span>
+          <textarea name="poruka" rows="4" data-i18n-placeholder="form_poruka_placeholder" placeholder="Dodatne napomene ili pitanja..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary" data-i18n="form_submit_btn">Pošaljite upit putem WhatsAppa</button>
+        <p class="form-note" data-i18n="form_note">Otvorit će se WhatsApp s pripremljenom porukom - samo je potvrdite i pošaljite.</p>
+      </form>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        title="Karta lokacije"
+        src="https://www.google.com/maps?q=Sr%C5%A1eni+16,+20357+Blace,+Hrvatska&output=embed"
+        width="100%" height="360" style="border:0;" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/385994975933" target="_blank" rel="noopener" class="fab-whatsapp" data-i18n-aria="aria_whatsapp" aria-label="WhatsApp">💬</a>
+<button class="fab-top" id="natrag" data-i18n-aria="aria_vrh" aria-label="Povratak na vrh">↑</button>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p id="footerPrava"></p>
+  </div>
+</footer>
+
+<script src="js/prijevodi.js"></script>
+<script src="js/zajednicko.js"></script>
+<script src="js/kontakt-forma.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "edb92683724a4794be06c28f92da06f3"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

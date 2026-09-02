@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="title_o_nama">O nama - Apartman Stara Kuća</title>
+<meta name="description" content="Upoznajte apartman Stara Kuća - stogodišnju kamenu kuću uz more u Blacu." data-i18n-content="meta_desc_o_nama">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Stara Kuća</a>
+    <nav class="main-nav" id="glavniMeni">
+      <a href="o-nama.html" data-i18n="nav_o_apartmanu">O nama</a>
+      <a href="galerija.html" data-i18n="nav_galerija">Galerija</a>
+      <a href="cjenik.html" data-i18n="nav_cjenik">Cjenik</a>
+      <a href="recenzije.html" data-i18n="nav_recenzije">Recenzije</a>
+      <a href="kontakt.html" data-i18n="nav_kontakt">Kontakt</a>
+    </nav>
+    <div class="jezik-prekidac" role="group" aria-label="Odabir jezika / Language / Sprache"></div>
+    <a href="kontakt.html" class="btn btn-primary nav-cta" data-i18n="nav_rezervirajte">Rezervirajte</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="aria_izbornik" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="section page-header">
+  <div class="container">
+    <p class="section-eyebrow" data-i18n="about_eyebrow">Dobrodošli</p>
+    <h1 class="section-title" data-i18n="about_title">O nama</h1>
+
+    <div class="about-stats">
+      <div class="about-stat"><span class="about-stat-num">88 m²</span><span class="about-stat-label" data-i18n="about_stat_povrsina">Površina</span></div>
+      <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-label" data-i18n="about_stat_sobe">Spavaće sobe</span></div>
+      <div class="about-stat"><span class="about-stat-num">6</span><span class="about-stat-label" data-i18n="about_stat_gostiju">Gostiju</span></div>
+      <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-label" data-i18n="about_stat_kupaonice">Kupaonice</span></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-media">
+        <img src="images/DnevniBoravak.jpg" alt="Dnevni boravak">
+      </div>
+      <div class="about-text">
+        <p data-i18n-html="about_text_1">
+          Apartman <strong>Stara Kuća</strong> smješten je u autentičnoj kamenoj kući koja spaja tradicionalni
+          izgled i moderan komfor. Idealan je za parove, obitelji i sve koji traže mirno mjesto za odmor,
+          a opet blizu svih znamenitosti.
+        </p>
+        <p data-i18n="about_text_2">
+          (Ovo je tekst-primjer – zamijenite ga vlastitim opisom apartmana: lokacija, broj kreveta,
+          kvadratura, pogled, blizina plaže/centra i sl.)
+        </p>
+      </div>
+    </div>
+
+    <div class="amenity-chips">
+      <span class="amenity-chip">📶 <span data-i18n="amenity_wifi">Besplatan WiFi</span></span>
+      <span class="amenity-chip">❄️ <span data-i18n="amenity_klima">Klima uređaj</span></span>
+      <span class="amenity-chip">🚗 <span data-i18n="amenity_parking">Parking</span></span>
+      <span class="amenity-chip">🍳 <span data-i18n="amenity_kuhinja">Opremljena kuhinja</span></span>
+      <span class="amenity-chip">🧺 <span data-i18n="amenity_perilica">Perilica rublja</span></span>
+      <span class="amenity-chip">🛏️ <span data-i18n="amenity_posteljina">Čista posteljina i ručnici</span></span>
+      <span class="amenity-chip">🚪 <span data-i18n="amenity_kupaonice">Privatna kupaonica u svakoj sobi</span></span>
+      <span class="amenity-chip">🏞️ <span data-i18n="amenity_balkon">Balkon i vrt uz more</span></span>
+      <span class="amenity-chip">🚫🐾 <span data-i18n="amenity_ljubimci">Ljubimci nisu dopušteni</span></span>
+      <span class="amenity-chip">🚭 <span data-i18n="amenity_pusenje">Zabranjeno pušenje</span></span>
+      <span class="amenity-chip">🔥 <span data-i18n="amenity_grijanje">Podno grijanje</span></span>
+      <span class="amenity-chip">🍖 <span data-i18n="amenity_rostilj">Vanjski roštilj</span></span>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/385994975933" target="_blank" rel="noopener" class="fab-whatsapp" data-i18n-aria="aria_whatsapp" aria-label="WhatsApp">💬</a>
+<button class="fab-top" id="natrag" data-i18n-aria="aria_vrh" aria-label="Povratak na vrh">↑</button>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p id="footerPrava"></p>
+  </div>
+</footer>
+
+<script src="js/prijevodi.js"></script>
+<script src="js/zajednicko.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "edb92683724a4794be06c28f92da06f3"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -136,15 +136,29 @@ a { color: inherit; text-decoration: none; }
 .section-lead { color: var(--ink-soft); max-width: 640px; margin-bottom: 40px; }
 
 /* About */
-.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
-.about-text p { color: var(--ink-soft); }
-.amenities { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.amenities li {
-  display: flex; align-items: center; gap: 10px;
-  background: var(--white); border: 1px solid var(--line);
-  border-radius: 10px; padding: 12px 14px; font-weight: 500; font-size: 0.95rem;
+.about-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  margin-bottom: 36px;
 }
-.amenity-icon { font-size: 1.2rem; }
+.about-stat {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 8px; box-shadow: var(--shadow);
+}
+.about-stat-num { font-family: var(--font-display); font-size: 1.6rem; color: var(--teal-dark); font-weight: 700; }
+.about-stat-label { font-size: 0.78rem; color: var(--ink-soft); font-weight: 600; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: center; margin-bottom: 32px; }
+.about-media { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/3; }
+.about-media img { width: 100%; height: 100%; object-fit: cover; }
+.about-text p { color: var(--ink-soft); }
+
+.amenity-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.amenity-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 999px; padding: 8px 16px; font-weight: 500; font-size: 0.88rem;
+}
 
 /* Gallery */
 .gallery-grid {
@@ -402,11 +416,12 @@ a { color: inherit; text-decoration: none; }
 }
 .fab-top.visible { opacity: 1; pointer-events: auto; }
 
-/* Traka brzih radnji za mobitel (poziv / WhatsApp / rezervacija) */
-.mobile-actionbar { display: none; }
-
 /* Pločice za brz pristup sekcijama na mobitelu (vidljivo samo na mobitelu) */
 .mobile-hub { display: none; }
+.mobile-hub-kontakt { display: none; }
+
+/* Naslov stranice na zasebnim stranicama (cjenik.html, o-nama.html, recenzije.html, kontakt.html) */
+.page-header { padding-top: 60px; }
 
 /* Footer */
 .site-footer { background: var(--ink); color: #d8cfc4; padding: 30px 0; }
@@ -435,7 +450,6 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 640px) {
   .container { padding: 0 16px; }
   .reviews-grid { grid-template-columns: 1fr; }
-  .amenities { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .full-gallery-grid { grid-template-columns: 1fr 1fr; }
   .section { padding: 44px 0; }
@@ -460,29 +474,20 @@ a { color: inherit; text-decoration: none; }
   /* Manji, gušći hero na mobitelu - ne guta cijeli ekran */
   .hero { min-height: 62vh; }
   .hero-content { padding-top: 60px; padding-bottom: 60px; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-actions .btn { text-align: center; }
+  /* Zamijenjeno pločicama brzog pristupa (.mobile-hub) ispod hero slike na naslovnici */
+  .hero-actions { display: none; }
 
-  /* Traka brzih radnji na dnu ekrana zamjenjuje plutajući WhatsApp gumb */
-  body { padding-bottom: 66px; }
-  .fab-whatsapp { display: none; }
-  .fab-top { bottom: 78px; right: 16px; width: 44px; height: 44px; font-size: 1.2rem; }
-  .mobile-actionbar {
-    display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 45;
-    background: var(--white); border-top: 1px solid var(--line);
-    box-shadow: 0 -6px 20px rgba(43, 36, 32, 0.10);
-    padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
-  }
-  .mobile-actionbar-item {
-    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
-    padding: 6px 4px; border-radius: 10px;
-    font-size: 0.68rem; font-weight: 600; color: var(--ink-soft);
-  }
-  .mobile-actionbar-icon { font-size: 1.15rem; }
-  .mobile-actionbar-primary { background: var(--teal); color: var(--white); }
+  /* Fiksni gumbi (WhatsApp, natrag na vrh) - normalna pozicija, nema više donje trake koja bi im smetala */
+  .fab-top { right: 16px; width: 44px; height: 44px; font-size: 1.2rem; }
+  .fab-whatsapp { right: 16px; width: 48px; height: 48px; font-size: 1.3rem; }
 
   /* Uže polje pravila rezervacije bez fiksne najveće širine */
   .policy-box { max-width: none; }
+
+  /* Naslovnica (index.html): na mobitelu se ne skrola kroz sav sadržaj - umjesto toga su tu
+     pločice brzog pristupa (mobile-hub), a sadržaj ispod (O nama, Cjenik, Recenzije, Kontakt...)
+     živi na zasebnim stranicama pa se ovdje skriva. */
+  .desktop-scroll-section { display: none; }
 
   /* Pločice brzog pristupa - odmah ispod hero slike, umjesto dugog skrolanja */
   .mobile-hub {
@@ -496,4 +501,15 @@ a { color: inherit; text-decoration: none; }
     box-shadow: var(--shadow);
   }
   .mobile-hub-icon { font-size: 1.8rem; }
+  .mobile-hub-kontakt {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin: 0 16px 20px; padding: 16px; background: var(--cream-alt);
+    border: 2px solid var(--teal); border-radius: var(--radius);
+    font-weight: 600; font-size: 0.95rem; color: var(--teal-dark);
+  }
+
+  /* Redizajnirano "O nama" - stat pločice u 2 stupca, slika iznad teksta na mobitelu */
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-media { aspect-ratio: 16/10; }
 }

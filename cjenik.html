@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="title_cjenik">Cjenik i dostupnost - Apartman Stara Kuća</title>
+<meta name="description" content="Cijene po noćenju i dostupnost apartmana Stara Kuća - odaberite datume i pošaljite upit." data-i18n-content="meta_desc_cjenik">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Stara Kuća</a>
+    <nav class="main-nav" id="glavniMeni">
+      <a href="o-nama.html" data-i18n="nav_o_apartmanu">O nama</a>
+      <a href="galerija.html" data-i18n="nav_galerija">Galerija</a>
+      <a href="cjenik.html" data-i18n="nav_cjenik">Cjenik</a>
+      <a href="recenzije.html" data-i18n="nav_recenzije">Recenzije</a>
+      <a href="kontakt.html" data-i18n="nav_kontakt">Kontakt</a>
+    </nav>
+    <div class="jezik-prekidac" role="group" aria-label="Odabir jezika / Language / Sprache"></div>
+    <a href="kontakt.html" class="btn btn-primary nav-cta" data-i18n="nav_rezervirajte">Rezervirajte</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="aria_izbornik" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="section page-header">
+  <div class="container">
+    <p class="section-eyebrow" data-i18n="cjenik_eyebrow">Planirajte</p>
+    <h1 class="section-title" data-i18n="cjenik_title">Cjenik i dostupnost</h1>
+    <p class="section-lead" data-i18n="cjenik_lead">Cijene po noćenju prikazane su ispod svakog datuma. Odaberite datum dolaska i datum odlaska klikom na kalendar. Rezervacija je moguća najranije dva dana unaprijed.</p>
+
+    <div class="calendar-card">
+      <div class="calendar-header">
+        <button id="mjesecPrije" class="cal-nav" aria-label="Prethodni mjesec">&#8592;</button>
+        <h3 class="mjesec-godina-odabir">
+          <span class="picker-wrap">
+            <button type="button" class="picker-toggle" id="mjesecGumb"></button>
+            <div class="picker-dropdown picker-dropdown-months" id="mjesecDropdown"></div>
+          </span>
+          <span class="picker-wrap">
+            <button type="button" class="picker-toggle" id="godinaGumb"></button>
+            <div class="picker-dropdown" id="godinaDropdown"></div>
+          </span>
+        </h3>
+        <button id="mjesecPoslije" class="cal-nav" aria-label="Sljedeći mjesec">&#8594;</button>
+      </div>
+      <div class="calendar-weekdays">
+        <span data-i18n="dan_pon">Pon</span><span data-i18n="dan_uto">Uto</span><span data-i18n="dan_sri">Sri</span><span data-i18n="dan_cet">Čet</span><span data-i18n="dan_pet">Pet</span><span data-i18n="dan_sub">Sub</span><span data-i18n="dan_ned">Ned</span>
+      </div>
+      <div class="calendar-grid" id="kalendarGrid"></div>
+      <div class="calendar-legend">
+        <span><i class="legend-dot legend-slobodno"></i> <span data-i18n="legend_slobodno">Slobodno</span></span>
+        <span><i class="legend-dot legend-zauzeto"></i> <span data-i18n="legend_zauzeto">Zauzeto</span></span>
+        <span><i class="legend-dot legend-odabrano"></i> <span data-i18n="legend_odabrano">Odabrano</span></span>
+      </div>
+
+      <div class="booking-summary" id="odabirSazetak">
+        <p class="booking-hint" id="odabirHint" data-i18n="booking_hint_pocetni">Kliknite datum dolaska, pa datum odlaska.</p>
+      </div>
+    </div>
+
+    <div class="policy-box">
+      <p class="policy-title" data-i18n="policy_title">Uvjeti rezervacije</p>
+      <ul>
+        <li data-i18n="policy_depozit">Za potvrdu rezervacije potreban je depozit u iznosu od 30% ukupnog iznosa rezervacije.</li>
+        <li data-i18n="policy_otkazivanje">Besplatno otkazivanje moguće je najkasnije mjesec dana prije datuma dolaska.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/385994975933" target="_blank" rel="noopener" class="fab-whatsapp" data-i18n-aria="aria_whatsapp" aria-label="WhatsApp">💬</a>
+<button class="fab-top" id="natrag" data-i18n-aria="aria_vrh" aria-label="Povratak na vrh">↑</button>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p id="footerPrava"></p>
+  </div>
+</footer>
+
+<script src="js/podaci.js"></script>
+<script src="js/prijevodi.js"></script>
+<script src="js/zajednicko.js"></script>
+<script src="js/kalendar.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "edb92683724a4794be06c28f92da06f3"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

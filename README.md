@@ -12,21 +12,53 @@ Jednostavna web stranica (HTML/CSS/JS) - ne treba nikakva instalacija, radi u sv
 (Ako nemate Live Server, može se i samo dvoklikom otvoriti `index.html` u pregledniku - sve radi,
 osim što se neće samo osvježavati.)
 
+Stranica je uživo na: **https://paulasrsen.github.io/StaraKuca-Web/**
+
 ## Struktura
+
+Stranica ima 6 HTML stranica. Naslovnica (`index.html`) na **desktopu** prikazuje sve odjednom (skrola
+se kroz O nama/Cjenik/Recenzije/Kontakt), dok na **mobitelu** prikazuje samo pločice koje vode na
+zasebne stranice - vidi odjeljak "Mobilni prikaz" niže.
 
 ```
 StaraKuca-Web/
-  index.html             - naslovna stranica
-  galerija.html          - puna fotogalerija (Apartman / Okolica, neograničen broj slika)
-  css/style.css           - izgled (boje, fontovi, raspored)
-  js/podaci.js             - CIJENE, ZAUZETI DATUMI I RECENZIJE (ovo najčešće mijenjate)
-  js/galerija-podaci.js     - POPIS SVIH SLIKA U GALERIJI (ovo mijenjate za dodavanje fotografija)
-  js/prijevodi.js            - SVI TEKSTOVI NA HR/EN/DE (ovo mijenjate kad mijenjate tekst na stranici)
-  js/zajednicko.js          - izbornik, gumb "na vrh" (zajedničko svim stranicama)
-  js/main.js                - funkcionalnost naslovnice (kalendar, kontakt forma...)
-  js/galerija.js             - funkcionalnost galerije (filtriranje, uvećani prikaz)
-  images/                     - fotografije (trenutno placeholderi)
+  index.html               - naslovna stranica (na desktopu sadrži sve, na mobitelu samo pločice)
+  galerija.html            - puna fotogalerija (filteri po sobama, neograničen broj slika)
+  cjenik.html              - kalendar, cijene i uvjeti rezervacije (zasebna stranica za mobitel)
+  o-nama.html              - opis apartmana i pogodnosti (zasebna stranica za mobitel)
+  recenzije.html           - recenzije gostiju (zasebna stranica za mobitel)
+  kontakt.html             - kontakt podaci, karta i forma za upit (zasebna stranica za mobitel)
+  css/style.css             - izgled (boje, fontovi, raspored) - zajednički svim stranicama
+  js/podaci.js               - CIJENE, ZAUZETI DATUMI I RECENZIJE (ovo najčešće mijenjate)
+  js/galerija-podaci.js       - POPIS SVIH SLIKA U GALERIJI (ovo mijenjate za dodavanje fotografija)
+  js/prijevodi.js              - SVI TEKSTOVI NA HR/EN/DE (ovo mijenjate kad mijenjate tekst na stranici)
+  js/zajednicko.js            - izbornik, gumb "na vrh", mobilni prikaz (zajedničko svim stranicama)
+  js/kalendar.js               - funkcionalnost kalendara/cjenika (koristi je index.html i cjenik.html)
+  js/recenzije.js               - prikaz recenzija (koristi je index.html i recenzije.html)
+  js/kontakt-forma.js            - slanje upita putem WhatsAppa (koristi je index.html i kontakt.html)
+  js/main.js                      - uvećani prikaz galerije na naslovnici (samo index.html)
+  js/galerija.js                   - funkcionalnost pune galerije (filtriranje, uvećani prikaz)
+  images/                           - fotografije
 ```
+
+**Bitno:** `js/kalendar.js`, `js/recenzije.js` i `js/kontakt-forma.js` su dijeljeni - iste funkcije
+koriste i naslovnica i zasebne stranice, pa ako mijenjate kako kalendar/recenzije/forma rade, mijenjate
+na jednom mjestu i to vrijedi svugdje. Sam **sadržaj** (cijene, tekst, recenzije) je uvijek u
+`js/podaci.js` i `js/prijevodi.js`, bez obzira koliko se stranica njime koristi.
+
+## Mobilni prikaz - zasebne stranice umjesto skrolanja
+
+Na mobitelu (uskom ekranu) naslovnica ne prikazuje sav sadržaj odjednom - umjesto toga, odmah ispod
+hero slike nalaze se 4 pločice (Galerija, Cjenik, O nama, Recenzije) i gumb "Kontaktirajte nas", koji
+vode na zasebne stranice. Na desktopu je sve i dalje jedna duga stranica sa skrolanjem, kao prije.
+
+Ovo znači da sadržaj sekcija (npr. tekst "O nama") postoji na **dva mjesta** - u `index.html` (za
+desktop) i u `o-nama.html` (za mobitel). Ako mijenjate strukturu/izgled tih sekcija, promjenu treba
+napraviti na oba mjesta. Sam **tekst** ne treba dvaput mijenjati jer dolazi iz `js/prijevodi.js`
+(zajedničko za obje verzije).
+
+Kad gost na `cjenik.html` odabere datume i klikne "Pošaljite upit za ove datume", odvede ga na
+`kontakt.html` s već popunjenim datumima (to radi automatski, preko preglednikove lokalne memorije).
 
 ## Što prvo zamijeniti
 
@@ -83,15 +115,11 @@ prikazuje broj noćenja i ukupna cijena, ili upozorenje ako je boravak prekratak
 zauzet datum. Klikom na naziv mjeseca ili godine u zaglavlju kalendara otvara se izbornik za brz odabir
 bilo kojeg mjeseca/godine.
 
-### 3. Kontakt - datoteka `index.html`, odjeljak `Kontakt i rezervacije`
-Telefon, e-mail, WhatsApp i adresa su već postavljeni na vaše prave podatke. Kad ih ubuduće mijenjate,
-pretražite (Ctrl+F) i zamijenite:
-- broj telefona (dva mjesta - `tel:` link i `wa.me` linkovi za WhatsApp)
-- e-mail adresu (`mailto:` link)
-- adresu u odjeljku "Lokacija"
-- linkove `href="#"` kod Facebook/Instagram/Booking.com/Airbnb pravim linkovima na svoje profile/oglase
-- Google kartu: `src="https://www.google.com/maps?q=...&output=embed"` - upute za format su na kraju ovog
-  README-a
+### 3. Kontakt - odjeljak "Kontakt i rezervacije" u `index.html` I u `kontakt.html`
+Telefon, e-mail, WhatsApp i adresa su već postavljeni na vaše prave podatke. Ovaj odjeljak postoji na
+**dva mjesta** (`index.html` za desktop i `kontakt.html` za mobitel) - kad ubuduće nešto mijenjate
+(broj telefona, e-mail, adresu, Booking.com/Airbnb linkove, Google kartu), pretražite (Ctrl+F) i
+zamijenite u OBJE datoteke.
 
 **Kontakt forma šalje upit putem WhatsAppa** (ne e-mailom). Gost popuni formu, klikne "Pošaljite upit putem
 WhatsAppa" i otvori mu se WhatsApp s već napisanom porukom (ime, e-mail, datumi, broj gostiju, poruka) -
@@ -114,10 +142,9 @@ Opis apartmana i popis pogodnosti su već popunjeni pravim podacima. Tekst se ur
 (ključevi `about_text_1`, `about_text_2` i `amenity_...`, po jedan za hr/en/de) - ne u `index.html`.
 
 ### 6. Jezici (hrvatski / engleski / njemački)
-Cijela stranica je dostupna na tri jezika. U zaglavlju svake stranice nalaze se tri gumba sa zastavicama
-(🇭🇷 🇬🇧 🇩🇪) - gost klikne na svoju zastavicu i cijela stranica (izbornik, tekstovi, kalendar, forma...)
-odmah se prevede, bez ponovnog učitavanja stranice. Odabir jezika se pamti pa ostaje isti i kad gost ode
-na drugu stranicu (npr. iz galerije natrag na naslovnicu).
+Cijela stranica je dostupna na tri jezika. U zaglavlju svake stranice nalaze se tri gumba (HR / EN / DE)
+- gost klikne svoj jezik i cijela stranica (izbornik, tekstovi, kalendar, forma...) odmah se prevede, bez
+ponovnog učitavanja stranice. Odabir jezika se pamti pa ostaje isti i kad gost ode na drugu stranicu.
 
 **Svi prijevodi su u jednoj datoteci: `js/prijevodi.js`.** Za svaki komad teksta postoji jedan "ključ"
 (npr. `hero_subtitle`) koji se ponavlja tri puta - jednom u `hr: {...}`, jednom u `en: {...}` i jednom u
@@ -132,7 +159,17 @@ Napomene:
 - Da dodate četvrti jezik, u `js/prijevodi.js` dodajte novi rječnik (kopirajte cijeli `en: {...}` blok
   i prevedite vrijednosti) te dodajte redak u popis `JEZICI` na dnu datoteke.
 
-## Objava stranice na internetu (kad bude spremna)
+## Objava izmjena na internetu
 
-Najjednostavnija besplatna opcija je **Netlify** ili **GitHub Pages** - samo se povuče cijela mapa
-na servis i stranica postane dostupna na javnom linku. Javite se kad dođe do tog koraka pa vam pomognem.
+Stranica je već objavljena preko **GitHub Pages** na https://paulasrsen.github.io/StaraKuca-Web/ i
+povezana s **GitHub Desktop** aplikacijom. Kad uredite bilo koju datoteku (npr. cijene u `js/podaci.js`),
+promjena se ne vidi uživo sama od sebe - potrebno je:
+1. Otvoriti GitHub Desktop
+2. Provjeriti da su promjene vidljive u popisu (lijevo)
+3. Upisati kratak opis promjene dolje lijevo i kliknuti **"Commit to main"**
+4. Kliknuti **"Push origin"** (gore desno)
+
+Za par minuta GitHub Pages automatski preuzme promjenu i ona postaje vidljiva na javnoj adresi.
+
+**Cloudflare Web Analytics** je uključen (vidi kod na dnu svake stranice) - broj posjeta i odakle
+dolaze gosti možete pratiti na dash.cloudflare.com → Analytics & Logs → Web Analytics.

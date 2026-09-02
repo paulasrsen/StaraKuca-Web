@@ -6,7 +6,7 @@
 */
 const PRIJEVODI = {
   hr: {
-    nav_o_apartmanu: "O apartmanu",
+    nav_o_apartmanu: "O nama",
     nav_galerija: "Galerija",
     nav_cjenik: "Cjenik",
     nav_recenzije: "Recenzije",
@@ -21,8 +21,17 @@ const PRIJEVODI = {
 
     title_pocetna: "Apartman Stara Kuća",
     title_galerija: "Fotogalerija - Apartman Stara Kuća",
+    title_cjenik: "Cjenik i dostupnost - Apartman Stara Kuća",
+    title_o_nama: "O nama - Apartman Stara Kuća",
+    title_recenzije: "Recenzije - Apartman Stara Kuća",
+    title_kontakt: "Kontakt i rezervacije - Apartman Stara Kuća",
     meta_desc_pocetna: "Apartman Stara Kuća – ugodan smještaj za vaš odmor. Pogledajte slike, cijene i recenzije gostiju.",
     meta_desc_galerija: "Fotogalerija apartmana Stara Kuća - pogledajte apartman i okolicu.",
+    meta_desc_cjenik: "Cijene po noćenju i dostupnost apartmana Stara Kuća - odaberite datume i pošaljite upit.",
+    meta_desc_o_nama: "Upoznajte apartman Stara Kuća - stogodišnju kamenu kuću uz more u Blacu.",
+    meta_desc_recenzije: "Pročitajte što gosti kažu o apartmanu Stara Kuća na Booking.com i Airbnb-u.",
+    meta_desc_kontakt: "Kontaktirajte nas ili pošaljite upit za rezervaciju apartmana Stara Kuća.",
+    mobile_hub_kontakt: "Kontaktirajte nas",
 
     hero_eyebrow: "Dobrodošli u",
     hero_subtitle: "Pravi odabir za miran i opušten odmor.",
@@ -30,7 +39,11 @@ const PRIJEVODI = {
     hero_btn_slike: "Pogledajte slike",
 
     about_eyebrow: "Dobrodošli",
-    about_title: "O apartmanu",
+    about_title: "O nama",
+    about_stat_povrsina: "Površina",
+    about_stat_sobe: "Spavaće sobe",
+    about_stat_gostiju: "Gostiju",
+    about_stat_kupaonice: "Kupaonice",
     about_text_1: "Apartman <strong>Stara Kuća</strong> nalazi se u stogodišnjoj kamenoj kući koju smo 2023. godine pažljivo obnovili i tada počeli iznajmljivati gostima. Na 88 m² prostiru se tri prostrane spavaće sobe, svaka s bračnim krevetom i vlastitom kupaonicom, pa je apartman idealan za do 6 gostiju - obitelji, grupe prijatelja ili dvije obitelji zajedno. Uživajte na balkonu s pogledom ili u vrtu tik uz more, u mirnom, obiteljski nastrojenom malom mjestu gdje je sve nadohvat ruke.",
     about_text_2: "Nalazimo se točno na pola puta između Splita i Dubrovnika, savršena polazna točka za dnevne izlete brodom do otoka Korčule i drugih obližnjih otoka - u mjestu se organiziraju i ture brodom do prekrasnih skrivenih lokacija. Obližnja plaža poznata je po kitesurfingu, a okolna mala mjesta nude bogat ljetni program, uključujući tradicionalni maraton lađa.",
     amenity_wifi: "Besplatan WiFi",
@@ -76,8 +89,6 @@ const PRIJEVODI = {
     policy_title: "Uvjeti rezervacije",
     policy_depozit: "Za potvrdu rezervacije potreban je depozit u iznosu od 30% ukupnog iznosa rezervacije.",
     policy_otkazivanje: "Besplatno otkazivanje moguće je najkasnije mjesec dana prije datuma dolaska.",
-
-    mob_poziv: "Poziv",
 
     kontakt_eyebrow: "Javite nam se",
     kontakt_title: "Kontakt i rezervacije",
@@ -130,8 +141,17 @@ const PRIJEVODI = {
 
     title_pocetna: "Stara Kuća Apartment",
     title_galerija: "Photo Gallery - Stara Kuća Apartment",
+    title_cjenik: "Prices & Availability - Stara Kuća Apartment",
+    title_o_nama: "About Us - Stara Kuća Apartment",
+    title_recenzije: "Reviews - Stara Kuća Apartment",
+    title_kontakt: "Contact & Bookings - Stara Kuća Apartment",
     meta_desc_pocetna: "Stara Kuća Apartment – a cozy stay for your holiday. See photos, prices and guest reviews.",
     meta_desc_galerija: "Photo gallery of the Stara Kuća apartment - see the apartment and its surroundings.",
+    meta_desc_cjenik: "Prices per night and availability for the Stara Kuća apartment - pick your dates and send an inquiry.",
+    meta_desc_o_nama: "Get to know the Stara Kuća apartment - a hundred-year-old stone house by the sea in Blace.",
+    meta_desc_recenzije: "Read what guests say about the Stara Kuća apartment on Booking.com and Airbnb.",
+    meta_desc_kontakt: "Contact us or send an inquiry to book the Stara Kuća apartment.",
+    mobile_hub_kontakt: "Contact us",
 
     hero_eyebrow: "Welcome to",
     hero_subtitle: "The perfect choice for a peaceful, relaxing holiday.",
@@ -139,7 +159,11 @@ const PRIJEVODI = {
     hero_btn_slike: "View photos",
 
     about_eyebrow: "Welcome",
-    about_title: "About the apartment",
+    about_title: "About us",
+    about_stat_povrsina: "Size",
+    about_stat_sobe: "Bedrooms",
+    about_stat_gostiju: "Guests",
+    about_stat_kupaonice: "Bathrooms",
     about_text_1: "The <strong>Stara Kuća</strong> apartment is set in a hundred-year-old stone house that we carefully renovated in 2023, when we began welcoming guests. Spread across 88 m², it offers three spacious bedrooms, each with a double bed and its own private bathroom, making it ideal for up to 6 guests - families, groups of friends, or two families travelling together. Relax on the balcony with a view, or in the garden right by the sea, in a quiet, family-friendly little village where everything is close at hand.",
     about_text_2: "We're located exactly halfway between Split and Dubrovnik - the perfect base for day trips by boat to the island of Korčula and other nearby islands, and the village also offers boat tours to beautiful hidden spots along the coast. The nearby beach is known for kitesurfing, and the surrounding small towns host a lively summer programme, including the traditional rowing-boat marathon (\"maraton lađa\").",
     amenity_wifi: "Free WiFi",
@@ -185,8 +209,6 @@ const PRIJEVODI = {
     policy_title: "Booking policy",
     policy_depozit: "A deposit of 30% of the total booking amount is required to confirm your reservation.",
     policy_otkazivanje: "Free cancellation is possible up to one month before your arrival date.",
-
-    mob_poziv: "Call",
 
     kontakt_eyebrow: "Get in touch",
     kontakt_title: "Contact & bookings",
@@ -239,8 +261,17 @@ const PRIJEVODI = {
 
     title_pocetna: "Apartment Stara Kuća",
     title_galerija: "Fotogalerie - Apartment Stara Kuća",
+    title_cjenik: "Preise & Verfügbarkeit - Apartment Stara Kuća",
+    title_o_nama: "Über uns - Apartment Stara Kuća",
+    title_recenzije: "Bewertungen - Apartment Stara Kuća",
+    title_kontakt: "Kontakt & Buchung - Apartment Stara Kuća",
     meta_desc_pocetna: "Apartment Stara Kuća – ein gemütlicher Aufenthalt für Ihren Urlaub. Fotos, Preise und Gästebewertungen ansehen.",
     meta_desc_galerija: "Fotogalerie des Apartments Stara Kuća - Apartment und Umgebung ansehen.",
+    meta_desc_cjenik: "Preise pro Nacht und Verfügbarkeit des Apartments Stara Kuća - Termine wählen und Anfrage senden.",
+    meta_desc_o_nama: "Lernen Sie das Apartment Stara Kuća kennen - ein hundert Jahre altes Steinhaus am Meer in Blace.",
+    meta_desc_recenzije: "Lesen Sie, was Gäste über das Apartment Stara Kuća auf Booking.com und Airbnb sagen.",
+    meta_desc_kontakt: "Kontaktieren Sie uns oder senden Sie eine Anfrage zur Buchung des Apartments Stara Kuća.",
+    mobile_hub_kontakt: "Kontaktieren Sie uns",
 
     hero_eyebrow: "Willkommen im",
     hero_subtitle: "Die richtige Wahl für einen ruhigen, entspannten Urlaub.",
@@ -248,7 +279,11 @@ const PRIJEVODI = {
     hero_btn_slike: "Fotos ansehen",
 
     about_eyebrow: "Willkommen",
-    about_title: "Über das Apartment",
+    about_title: "Über uns",
+    about_stat_povrsina: "Größe",
+    about_stat_sobe: "Schlafzimmer",
+    about_stat_gostiju: "Gäste",
+    about_stat_kupaonice: "Badezimmer",
     about_text_1: "Das Apartment <strong>Stara Kuća</strong> befindet sich in einem hundert Jahre alten Steinhaus, das wir 2023 sorgfältig renoviert haben - seitdem empfangen wir hier Gäste. Auf 88 m² bietet es drei geräumige Schlafzimmer, jedes mit Doppelbett und eigenem Bad, und ist damit ideal für bis zu 6 Gäste - Familien, Freundesgruppen oder zwei gemeinsam reisende Familien. Genießen Sie den Balkon mit Aussicht oder den Garten direkt am Meer, in einem ruhigen, familienfreundlichen kleinen Ort, in dem alles nah beieinander liegt.",
     about_text_2: "Wir liegen genau auf halbem Weg zwischen Split und Dubrovnik - der perfekte Ausgangspunkt für Tagesausflüge mit dem Boot zur Insel Korčula und zu anderen nahegelegenen Inseln. Im Ort werden zudem Bootstouren zu wunderschönen, versteckten Orten angeboten. Der nahe gelegene Strand ist für Kitesurfen bekannt, und die umliegenden kleinen Orte bieten ein reichhaltiges Sommerprogramm, darunter das traditionelle Ruderboot-Rennen (\"maraton lađa\").",
     amenity_wifi: "Kostenloses WLAN",
@@ -294,8 +329,6 @@ const PRIJEVODI = {
     policy_title: "Buchungsbedingungen",
     policy_depozit: "Zur Bestätigung der Reservierung ist eine Anzahlung von 30% des Gesamtbetrags erforderlich.",
     policy_otkazivanje: "Eine kostenlose Stornierung ist bis spätestens einen Monat vor dem Anreisedatum möglich.",
-
-    mob_poziv: "Anrufen",
 
     kontakt_eyebrow: "Kontaktieren Sie uns",
     kontakt_title: "Kontakt & Buchung",

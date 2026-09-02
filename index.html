@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-mobilni-hub="true">
 
 <header class="site-header" id="vrh">
   <div class="container header-inner">
@@ -48,29 +48,44 @@
 </section>
 
 <div class="mobile-hub">
-  <a href="#cjenik" class="mobile-hub-tile">
-    <span class="mobile-hub-icon">📅</span>
-    <span data-i18n="nav_cjenik">Cjenik</span>
-  </a>
   <a href="galerija.html" class="mobile-hub-tile">
     <span class="mobile-hub-icon">🖼️</span>
     <span data-i18n="nav_galerija">Galerija</span>
   </a>
-  <a href="#o-apartmanu" class="mobile-hub-tile">
-    <span class="mobile-hub-icon">🏠</span>
-    <span data-i18n="nav_o_apartmanu">O apartmanu</span>
+  <a href="cjenik.html" class="mobile-hub-tile">
+    <span class="mobile-hub-icon">📅</span>
+    <span data-i18n="nav_cjenik">Cjenik</span>
   </a>
-  <a href="#recenzije" class="mobile-hub-tile">
+  <a href="o-nama.html" class="mobile-hub-tile">
+    <span class="mobile-hub-icon">🏠</span>
+    <span data-i18n="nav_o_apartmanu">O nama</span>
+  </a>
+  <a href="recenzije.html" class="mobile-hub-tile">
     <span class="mobile-hub-icon">⭐</span>
     <span data-i18n="nav_recenzije">Recenzije</span>
   </a>
 </div>
+<a href="kontakt.html" class="mobile-hub-kontakt">
+  <span class="mobile-hub-icon">📞</span>
+  <span data-i18n="mobile_hub_kontakt">Kontaktirajte nas</span>
+</a>
 
-<section class="section" id="o-apartmanu">
+<section class="section desktop-scroll-section" id="o-apartmanu">
   <div class="container">
     <p class="section-eyebrow" data-i18n="about_eyebrow">Dobrodošli</p>
-    <h2 class="section-title" data-i18n="about_title">O apartmanu</h2>
+    <h2 class="section-title" data-i18n="about_title">O nama</h2>
+
+    <div class="about-stats">
+      <div class="about-stat"><span class="about-stat-num">88 m²</span><span class="about-stat-label" data-i18n="about_stat_povrsina">Površina</span></div>
+      <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-label" data-i18n="about_stat_sobe">Spavaće sobe</span></div>
+      <div class="about-stat"><span class="about-stat-num">6</span><span class="about-stat-label" data-i18n="about_stat_gostiju">Gostiju</span></div>
+      <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-label" data-i18n="about_stat_kupaonice">Kupaonice</span></div>
+    </div>
+
     <div class="about-grid">
+      <div class="about-media">
+        <img src="images/DnevniBoravak.jpg" alt="Dnevni boravak">
+      </div>
       <div class="about-text">
         <p data-i18n-html="about_text_1">
           Apartman <strong>Stara Kuća</strong> smješten je u autentičnoj kamenoj kući koja spaja tradicionalni
@@ -82,25 +97,26 @@
           kvadratura, pogled, blizina plaže/centra i sl.)
         </p>
       </div>
-      <ul class="amenities">
-        <li><span class="amenity-icon">📶</span> <span data-i18n="amenity_wifi">Besplatan WiFi</span></li>
-        <li><span class="amenity-icon">❄️</span> <span data-i18n="amenity_klima">Klima uređaj</span></li>
-        <li><span class="amenity-icon">🚗</span> <span data-i18n="amenity_parking">Parking</span></li>
-        <li><span class="amenity-icon">🍳</span> <span data-i18n="amenity_kuhinja">Opremljena kuhinja</span></li>
-        <li><span class="amenity-icon">🧺</span> <span data-i18n="amenity_perilica">Perilica rublja</span></li>
-        <li><span class="amenity-icon">🛏️</span> <span data-i18n="amenity_posteljina">Čista posteljina i ručnici</span></li>
-        <li><span class="amenity-icon">🚪</span> <span data-i18n="amenity_kupaonice">Privatna kupaonica u svakoj sobi</span></li>
-        <li><span class="amenity-icon">🏞️</span> <span data-i18n="amenity_balkon">Balkon i vrt uz more</span></li>
-        <li><span class="amenity-icon">🚫🐾</span> <span data-i18n="amenity_ljubimci">Ljubimci nisu dopušteni</span></li>
-        <li><span class="amenity-icon">🚭</span> <span data-i18n="amenity_pusenje">Zabranjeno pušenje</span></li>
-        <li><span class="amenity-icon">🔥</span> <span data-i18n="amenity_grijanje">Podno grijanje</span></li>
-        <li><span class="amenity-icon">🍖</span> <span data-i18n="amenity_rostilj">Vanjski roštilj</span></li>
-      </ul>
+    </div>
+
+    <div class="amenity-chips">
+      <span class="amenity-chip">📶 <span data-i18n="amenity_wifi">Besplatan WiFi</span></span>
+      <span class="amenity-chip">❄️ <span data-i18n="amenity_klima">Klima uređaj</span></span>
+      <span class="amenity-chip">🚗 <span data-i18n="amenity_parking">Parking</span></span>
+      <span class="amenity-chip">🍳 <span data-i18n="amenity_kuhinja">Opremljena kuhinja</span></span>
+      <span class="amenity-chip">🧺 <span data-i18n="amenity_perilica">Perilica rublja</span></span>
+      <span class="amenity-chip">🛏️ <span data-i18n="amenity_posteljina">Čista posteljina i ručnici</span></span>
+      <span class="amenity-chip">🚪 <span data-i18n="amenity_kupaonice">Privatna kupaonica u svakoj sobi</span></span>
+      <span class="amenity-chip">🏞️ <span data-i18n="amenity_balkon">Balkon i vrt uz more</span></span>
+      <span class="amenity-chip">🚫🐾 <span data-i18n="amenity_ljubimci">Ljubimci nisu dopušteni</span></span>
+      <span class="amenity-chip">🚭 <span data-i18n="amenity_pusenje">Zabranjeno pušenje</span></span>
+      <span class="amenity-chip">🔥 <span data-i18n="amenity_grijanje">Podno grijanje</span></span>
+      <span class="amenity-chip">🍖 <span data-i18n="amenity_rostilj">Vanjski roštilj</span></span>
     </div>
   </div>
 </section>
 
-<section class="section section-alt" id="galerija">
+<section class="section section-alt desktop-scroll-section" id="galerija">
   <div class="container">
     <p class="section-eyebrow" data-i18n="gallery_eyebrow">Pogledajte</p>
     <h2 class="section-title" data-i18n="gallery_title">Galerija</h2>
@@ -135,7 +151,7 @@
   <img src="" alt="" id="lightboxImg">
 </div>
 
-<section class="section" id="cjenik">
+<section class="section desktop-scroll-section" id="cjenik">
   <div class="container">
     <p class="section-eyebrow" data-i18n="cjenik_eyebrow">Planirajte</p>
     <h2 class="section-title" data-i18n="cjenik_title">Cjenik i dostupnost</h2>
@@ -181,7 +197,7 @@
   </div>
 </section>
 
-<section class="section section-alt" id="recenzije">
+<section class="section section-alt desktop-scroll-section" id="recenzije">
   <div class="container">
     <p class="section-eyebrow" data-i18n="reviews_eyebrow">Što kažu gosti</p>
     <h2 class="section-title" data-i18n="reviews_title">Recenzije</h2>
@@ -190,7 +206,7 @@
   </div>
 </section>
 
-<section class="section" id="kontakt">
+<section class="section desktop-scroll-section" id="kontakt">
   <div class="container">
     <p class="section-eyebrow" data-i18n="kontakt_eyebrow">Javite nam se</p>
     <h2 class="section-title" data-i18n="kontakt_title">Kontakt i rezervacije</h2>
@@ -287,21 +303,6 @@
 <a href="https://wa.me/385994975933" target="_blank" rel="noopener" class="fab-whatsapp" data-i18n-aria="aria_whatsapp" aria-label="WhatsApp">💬</a>
 <button class="fab-top" id="natrag" data-i18n-aria="aria_vrh" aria-label="Povratak na vrh">↑</button>
 
-<nav class="mobile-actionbar" aria-label="Brze radnje">
-  <a href="tel:+385994975933" class="mobile-actionbar-item">
-    <span class="mobile-actionbar-icon">📞</span>
-    <span data-i18n="mob_poziv">Poziv</span>
-  </a>
-  <a href="https://wa.me/385994975933" target="_blank" rel="noopener" class="mobile-actionbar-item">
-    <span class="mobile-actionbar-icon">💬</span>
-    <span>WhatsApp</span>
-  </a>
-  <a href="#cjenik" class="mobile-actionbar-item mobile-actionbar-primary">
-    <span class="mobile-actionbar-icon">📅</span>
-    <span data-i18n="nav_rezervirajte">Rezervirajte</span>
-  </a>
-</nav>
-
 <footer class="site-footer">
   <div class="container footer-inner">
     <p id="footerPrava"></p>
@@ -311,6 +312,9 @@
 <script src="js/podaci.js"></script>
 <script src="js/prijevodi.js"></script>
 <script src="js/zajednicko.js"></script>
+<script src="js/kalendar.js"></script>
+<script src="js/recenzije.js"></script>
+<script src="js/kontakt-forma.js"></script>
 <script src="js/main.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "edb92683724a4794be06c28f92da06f3"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
